@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AmazonContext } from '../context/AmazonContext';
 import Image from 'next/image';
 import { ConnectButton } from 'web3uikit';
 import Link from 'next/link';
@@ -8,14 +9,13 @@ import { FaBox } from 'react-icons/fa';
 import { BsFillBookmarkFill, BsFillPersonFill } from 'react-icons/bs';
 import { AiOutlineHistory } from 'react-icons/ai';
 
-const isAuthenticated = true;
-const userName = "Juan";
-
 const Sidebar = () => {
+
+    const { isAuthenticated, nickName, userName, setNickName, handleSetUserName } = useContext(AmazonContext);
 
     const styles = {
         container: `h-full w-[300px] flex flex-col bg-[#fff] static`,
-        profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-t from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-[#fb9701]`,
+        profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-l from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-black`,
         profilePicContainer: `flex  rounded-xl items-center justify-center w-full h-full mb-5`,
         profilePic: `rounded-3xl object-cover`,
         welcome: ` text-md mb-2 font-bold text-2xl text-white`,
@@ -50,13 +50,13 @@ const Sidebar = () => {
                                         type="text"
                                         placeholder="Username..."
                                         className={styles.usernameInput}
-                                    // value={nickname}
-                                    // onChange={e => setNickname(e.target.value)}
+                                        value={nickName}
+                                        onChange={e => setNickName(e.target.value)}
                                     />
                                 </div>
                                 <button
                                     className={styles.setNickname}
-                                // onClick={handleSetUsername}
+                                    onClick={handleSetUserName}
                                 >
                                     Set Nickname
                                 </button>
