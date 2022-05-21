@@ -27,6 +27,7 @@ const Sidebar = () => {
         usernameInput: `bg-transparent border-white border-2 rounded-lg w-[80%] py-2 px-4 text-lg mt-[20px] placeholder:text-white focus:outline-none flex justify-center items-center text-white`,
         username: `flex items-center w-full justify-center`,
         setNickname: `text-lg font-bold flex flex-1 items-center mt-[20px] mb-[20px] text-white`,
+        title: `flex items-center text-xl font-bold cursor-pointer gap-2 text-[#42667e]`,
     }
 
     return (
@@ -76,15 +77,8 @@ const Sidebar = () => {
             </div>
             <div className={styles.menu}>
                 <Link href='/'>
-                    <div className={styles.menuItem}>
-                        <Image
-                            src={logo}
-                            height={30}
-                            width={30}
-                            className={styles.amazonLogo}
-                        />
-                        My Amazon
-                        <br /> board
+                    <div className={styles.title}>
+                        MarketPlace Board
                     </div>
                 </Link>
                 <div className={styles.menuItem}>
@@ -107,7 +101,9 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div className={styles.companyName}>
-                <Image src={logoFull} alt='amazon' height={100} width={100} />
+                Made with love
+                <br />
+                by Juanchi!
             </div>
         </div>
     )
