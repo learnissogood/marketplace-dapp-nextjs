@@ -10,7 +10,7 @@ import 'react-simple-hook-modal/dist/styles.css';
 const Header = () => {
 
     const styles = {
-        container: `h-[60px] w-full flex items-center gap-5 px-16 bg-[#000123] rounded-full`,
+        container: `h-[60px] w-full flex items-center gap-5 px-16 bg-gradient-to-l to-[#0d141c] from-[#42667e]`,
         logo: `flex items-center ml-[5px] cursor-pointer flex-1`,
         search: `p-[25px] mr-[30px] w-[400px] h-[40px] bg-white rounded-full shadow-lg flex flex items-center border border-white`,
         searchInput: `bg-transparent focus:outline-none border-none flex-1 items-center flex`,
@@ -20,7 +20,6 @@ const Header = () => {
         name: `text-white font-bold pr-10`
     };
 
-    // const { openModal, isModalOpen, closeModal } = useModal();
     const { balance } = useContext(AmazonContext);
     const [isVisible, setIsVisible] = useState(false);
 
