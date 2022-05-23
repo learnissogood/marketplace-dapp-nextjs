@@ -3,14 +3,14 @@ import React from 'react';
 const Featured = () => {
 
   const styles = {
-    container: `h-[300px] w-full flex p-[20px] flex-col`,
-    title: `text-3xl font-bolder mb-[20px] mt-[30px] mb-24 ml-[40px] text-center pb-[25px]`,
+    container: `h-full w-full flex p-[40px] flex-col bg-[#908d94] rounded-xl`,
+    title: `text-3xl font-bolder mb-[20px] mb-24 ml-[40px] text-center text-white`,
     cards: `h-full w-full flex gap-[100px] justify-between ml-[30px]`,
-    card1: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94] relative cursor-pointer transition-all duration-300  hover:scale-105 hover:shadow-xl border-2 border-black`,
-    card2: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94] relative cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-black`,
-    card3: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94] relative cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-black`,
-    card4: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94] relative cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-black`,
-    cardCross: `h-[180px] w-[125px] rounded-3xl absolute bottom-[20px] left-[20px] transition-all duration-300 hover:scale-105 flex  overflow-hidden`,
+    card1: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94]  border-2 border-black`,
+    card2: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94]  border-2 border-black`,
+    card3: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94]  border-2 border-black`,
+    card4: `h-[130px] w-[400px] p-[20px] rounded-3xl bg-gradient-to-r from-[#424b52] to-[#908d94]  border-2 border-black`,
+    cardCross: `h-[180px] w-[125px] rounded-3xl left-[20px] flex overflow-hidden mt-[-100px]`,
   };
 
   return (

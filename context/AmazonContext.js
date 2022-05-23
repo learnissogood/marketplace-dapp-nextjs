@@ -19,6 +19,7 @@ export const AmazonProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(false);
     const [balance, setBalance] = useState('');
     const [recentTransaction, setRecentTransaction] = useState([]);
+    const [ownedItems, setOwnedItems] = useState([]);
 
     const { authenticate, isAuthenticated, enableWeb3, Moralis, user, isWeb3Enabled } = useMoralis();
 
@@ -66,6 +67,11 @@ export const AmazonProvider = ({children}) => {
             console.log(object);
             setRecentTransaction([object]);
         })
+
+        // const lastTx = Moralis.Object.extend('PolygonTransactions');
+        // const query = new Moralis.Query(lastTx);
+        // const result = await query.first();
+        // setRecentTransaction([result]);
     };
 
     useEffect(() => {
@@ -80,12 +86,13 @@ export const AmazonProvider = ({children}) => {
         if (isAuthenticated) {
             fetchNickName();
         }
-    }, [isAuthenticated, user, userName, currentAccount, getBalance, listenToUpdate]);
+    }, [isAuthenticated, user, userName, currentAccount, getBalance]);
 
     useEffect(() => {
         ;(async() => {
             if (isWeb3Enabled) {
                 await getAssets();
+                await getOwnedAssets();
             }
         })()
     }, [isWeb3Enabled]);
@@ -179,6 +186,15 @@ export const AmazonProvider = ({children}) => {
         }
     };
 
+    const getOwnedAssets = async () => {
+        try {
+            const assets = await user?.get('ownedAssets');
+            setOwnedItems([assets]);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <AmazonContext.Provider
             value={{
@@ -200,7 +216,8 @@ export const AmazonProvider = ({children}) => {
                 currentAccount,
                 buyTokens,
                 buyAsset,
-                recentTransaction
+                recentTransaction,
+                ownedItems,
             }}
         >
             {children}

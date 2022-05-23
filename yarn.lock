@@ -6093,7 +6093,7 @@
     "yargs-parser" "20.2.4"
     "yargs-unparser" "2.0.0"
 
-"moment@^2.24.0", "moment@^2.29.2":
+"moment@^2.24.0", "moment@^2.29.2", "moment@^2.29.3":
   "integrity" "sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw=="
   "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.3.tgz"
   "version" "2.29.3"

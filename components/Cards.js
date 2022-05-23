@@ -7,7 +7,7 @@ const Cards = () => {
     const { assets } = useContext(AmazonContext);
 
     const styles = {
-        container: `h-full w-full flex flex-col ml-[20px] mt-[50px] p-[75px]`,
+        container: `h-full w-full flex flex-col ml-[20px] p-[50px]`,
         title: `text-3xl font-bolder mb-[75px] text-center`,
         cards: `flex items-center flex-wrap gap-[80px]`,
     };
