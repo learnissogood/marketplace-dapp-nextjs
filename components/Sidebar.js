@@ -91,7 +91,7 @@ const Sidebar = () => {
                     <BsFillPersonFill />
                     Saved
                 </div>
-                <Link href='/History'>
+                <Link href='/history'>
                     <div className={styles.menuItem}>
                         <AiOutlineHistory />
                         Transaction History
