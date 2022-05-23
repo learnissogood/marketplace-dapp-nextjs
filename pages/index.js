@@ -64,7 +64,7 @@ export default function Home() {
                 <div className='ml-[300px]'>
                   <p>
                     Hash:{' '}
-                    <a target={'_blank'} rel={'noopener norefer'} href={`https://mumbai.polygonscan.com/tx/${transaction.attributes.hash}`}>
+                    <a target={'_blank'} rel={'noopener noreferrer'} href={`https://mumbai.polygonscan.com/tx/${transaction.attributes.hash}`}>
                       {transaction.attributes.hash.slice(0, 10)}
                     </a>
                   </p>
