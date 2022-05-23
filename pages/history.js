@@ -5,9 +5,9 @@ import HeaderComponent from '../components/Header';
 import { Layout } from 'antd';
 import Transaction from '../components/Transaction';
 
-export default function History() {
+const History = () => {
 
-    const { ownedItems } = useContext(AmazonContext);
+    // const { ownedItems } = useContext(AmazonContext);
 
     const { Header, Content, Footer, Sider } = Layout;
 
@@ -75,3 +75,5 @@ export default function History() {
     </Layout>
   )
 }
+
+export default History;
