@@ -5,7 +5,7 @@ import HeaderComponent from '../components/Header';
 import { Layout } from 'antd';
 import Transaction from '../components/Transaction';
 
-const History = () => {
+export default function History() {
 
     const { ownedItems } = useContext(AmazonContext);
 
@@ -75,5 +75,3 @@ const History = () => {
     </Layout>
   )
 }
-
-export default History
