@@ -31,7 +31,7 @@ const BuyModal = () => {
 
     useEffect(() => {
         calculatePrice();
-    }, [tokenAmount]);
+    }, [tokenAmount, calculatePrice]);
 
     return (
         <div className={styles.container}>
