@@ -24,14 +24,14 @@ const BuyModal = () => {
         space: `mt-[40px]`
     };
 
-    useEffect(() => {
-        calculatePrice();
-    }, [tokenAmount]);
-
     const calculatePrice = () => {
         const price = (parseFloat(tokenAmount * 0.0001)).toFixed(4);
         setAmountDue(price);
-    }
+    };
+
+    useEffect(() => {
+        calculatePrice();
+    }, [tokenAmount]);
 
     return (
         <div className={styles.container}>
